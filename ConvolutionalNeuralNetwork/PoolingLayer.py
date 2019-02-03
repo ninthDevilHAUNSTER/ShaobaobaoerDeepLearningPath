@@ -2,7 +2,7 @@ import numpy as np
 from misc.mathlab.shaobaobaoer_dl_lab import im2col, col2im
 
 
-class Pooling:
+class PoolingLayer(object):
     def __init__(self, pool_h, pool_w, stride=1, pad=0):
         self.pool_h = pool_h
         self.pool_w = pool_w
