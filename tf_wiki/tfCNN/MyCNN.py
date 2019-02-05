@@ -44,6 +44,6 @@ class CNN(tf.keras.Model):
         x = self.dense2(x) # N 10
         return x
 
-    def predict(self,inputs):
-        l = self(inputs)
-        return tf.argmax
+    def predict(self, inputs):
+        logits = self(inputs)
+        return tf.argmax(logits, axis=-1)

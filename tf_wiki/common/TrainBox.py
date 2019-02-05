@@ -1,7 +1,7 @@
 import tensorflow as tf
 import tensorflow.keras
 import numpy as np
-from misc.dataset.DataLoader import DataLoader
+from misc.dataset.DataLoader import DataLoaderMnist
 from tf_wiki.tfMLP.MLP import MLP
 from tf_wiki.tfCNN.MyCNN import CNN
 
@@ -11,7 +11,7 @@ num_batches = 5000
 batch_size = 120
 learning_rate = 0.001
 model = CNN()
-data_loader = DataLoader()
+data_loader = DataLoaderMnist()
 # 设置参数更新的方法是adam
 optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate)
 
